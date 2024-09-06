@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dist/css/main.prefixed.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Hospital Dashbord</title>
+  </head>
+
+  <body>
+    <section id="sidebar">
+      <div class="top-logo-container">
+        <div class="logo-container">
+          <img src="img/logo.png" alt="Logo" class="big-logo" />
+          <img src="img/smallLogo.png" alt="Logo" class="small-logo" />
+          <a href="#" class="expand">
+            <img src="img/expand.png" alt="expand" />
+          </a>
+        </div>
+        <hr class="divider" />
+      </div>
+
+      <ul class="side-menu top">
+        <li class="active">
+          <a href="#">
+            <img src="img/overview.png" alt="overview" />
+            <p class="text">Overview</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="img/appointments.png" alt="appointments" />
+            <p class="text">Appointments</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="img/doctors.png" alt="doctors" />
+            <p class="text">Doctors</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="img/pathResults.png" alt="pathology" />
+            <p class="text">Pathology Results</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="img/charts.png" alt="chats" />
+            <div class="charts-container">
+              <p class="text">Chats</p>
+              <div class="circle">10</div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section id="content">
+      <nav>
+        <div class="menu">
+          <i class="bx bx-menu icon-large"></i>
+        </div>
+        <form action="#">
+          <div class="form-input">
+            <i class="bx bx-search icon-position"></i>
+            <input
+              id="Search"
+              type="search"
+              name="search"
+              placeholder="Search pathology results"
+            />
+          </div>
+        </form>
+        <div class="user-info">
+          <div class="left-container">
+            <div class="notification-container">
+              <div class="notification"></div>
+            </div>
+            <span class="vertical-line"></span>
+          </div>
+
+          <div class="profile-container">
+            <button class="dropdown-profile">
+              <img src="img/profil.png" alt="Photo profil" />
+            </button>
+            <div class="patient-info">
+              <h4 class="patient-name">Ola Boluwatife</h4>
+              <p class="patient">PATIENT</p>
+            </div>
+
+            <div id="dropdown-profile-menu" class="dropdown-content">
+              <div class="dropdown-profile">
+                <img src="img/profil.png" alt="Photo profil" />
+                <div class="dropdown-user-info">
+                  <p class="dropdown-user-name">Ola Boluwatife</p>
+                  <p class="dropdown-user-email">ola@example.com</p>
+                </div>
+              </div>
+              <ul>
+                <li><a href="#">View Profile</a></li>
+                <li><a href="#">Account Settings</a></li>
+                <li><a href="#">Notifications</a></li>
+                <li><a href="#">Switch Account</a></li>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="modal-container">
+        <button id="openModal">Open Modal</button>
+
+        <div id="modal" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <p>Patient Form</p>
+              <span class="closeModal">&times;</span>
+            </div>
+            <div class="modal-main">
+              <div id="modalBody" class="modal-body"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-container">
+        <div class="carousel">
+          <div class="carousel-img">
+            <img src="img/hospital1.png" alt="Placeholder Image 1" />
+          </div>
+          <div class="carousel-img">
+            <img src="img/hospital2.png" alt="Placeholder Image 2" />
+          </div>
+          <div class="carousel-img">
+            <img src="img/hospital3.png" alt="Placeholder Image 3" />
+          </div>
+          <div class="carousel-img">
+            <img src="img/hospital4.png" alt="Placeholder Image 4" />
+          </div>
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      </div>
+    </section>
+
+    <script src="./src/js/dropdown.js"></script>
+    <script src="./src/js/carousel.js"></script>
+    <script src="./src/js/modal.js"></script>
+  </body>
+</html>

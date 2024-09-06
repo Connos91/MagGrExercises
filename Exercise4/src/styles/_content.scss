@@ -1,0 +1,371 @@
+@import "mixins";
+@import "variables";
+
+#content {
+  position: relative;
+  transition: 0.3s ease;
+  margin: 22px 22px 0 0;
+  width: 78%;
+
+  nav {
+    background: $grey;
+    border-radius: 20px;
+    padding: 22px 1px 22px 15px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    left: 0;
+    z-index: 1000;
+    top: 0;
+    margin-left: 23px;
+
+    .bx.bx-menu {
+      cursor: pointer;
+      position: absolute;
+    }
+
+    .nav-link {
+      font-size: 16px;
+      transition: 0.3s ease;
+
+      &:hover {
+        color: $blue;
+      }
+    }
+
+    .menu {
+      display: none;
+    }
+
+    form {
+      display: flex;
+      width: 77%;
+
+      .form-input {
+        display: flex;
+        align-items: center;
+        height: 45px;
+        width: 100%;
+        padding-left: 6px;
+
+        input {
+          flex-grow: 1;
+          padding: 5px 0 5px 30px;
+          height: 100%;
+          border: none;
+          background: $white;
+          border-radius: 10px;
+          border: 1px solid $dark-grey;
+          outline: none;
+          width: 100%;
+
+          &::placeholder {
+            font-size: 12px;
+          }
+        }
+
+        #Search::-webkit-search-cancel-button {
+          position: relative;
+          right: 10px;
+        }
+
+        .icon-position {
+          position: absolute;
+          padding: 10px;
+        }
+      }
+    }
+
+    .notification-container {
+      background: $white;
+      border-radius: 50%;
+      border: 1px solid $dark-grey;
+      padding: 3px;
+      display: flex;
+      align-items: center;
+
+      .notification {
+        font-size: 20px;
+        position: relative;
+        width: 16px;
+        background: url("/assets/iconBell.png");
+        height: 16px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        opacity: 1;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+      }
+    }
+
+    .user-info {
+      display: flex;
+      align-items: center;
+      width: 23%;
+
+      .patient-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 0 6px 3px;
+      }
+
+      .patient-name {
+        font-size: 12px;
+        font-family: $font-poppins;
+      }
+
+      .patient {
+        font-size: 10px;
+        font-family: $font-poppins;
+        color: $blue;
+      }
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-button {
+      background-color: $white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .user-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .user-photo {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .left-container {
+      display: flex;
+      align-items: center;
+      padding-left: 15px;
+      margin-bottom: 10px;
+    }
+
+    .profile-container {
+      display: flex;
+      align-items: center;
+      padding-left: 5px;
+
+      .dropdown-profile {
+        display: flex;
+        margin-right: 8px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        padding: 0;
+
+        img {
+          width: 39px;
+          height: 39px;
+          object-fit: cover;
+          border-radius: 50px;
+          z-index: -1;
+        }
+      }
+    }
+
+    .showDropdown {
+      display: flex;
+      flex-direction: column;
+      top: 70px;
+      right: 0;
+    }
+
+    .vertical-line {
+      border-left: 2px solid $dark-grey;
+      height: 26px;
+      margin: 0 16px;
+    }
+  }
+}
+
+@include media-desktop {
+  #content {
+    padding: 0;
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 10px;
+      padding: 10px;
+
+      .user-info {
+        width: 30%;
+        margin-right: 5px;
+      }
+
+      .left-container {
+        padding-left: 5px;
+      }
+
+      .vertical-line {
+        margin: 0 5px;
+      }
+
+      form {
+        width: 100%;
+
+        .form-input {
+          width: 100%;
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}
+
+@include media-mobile {
+  #content {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: auto;
+
+    nav {
+      margin-left: 0;
+      width: 100%;
+      padding: 5px;
+
+      .menu {
+        display: flex;
+        width: 30px;
+        align-items: center;
+        justify-content: center;
+
+        .icon-large {
+          font-size: 22px;
+        }
+      }
+
+      .user-info {
+        width: auto;
+
+        .patient-info {
+          display: none;
+        }
+      }
+
+      .notification-container {
+        margin-left: 5px;
+      }
+
+      .left-container {
+        padding-left: 0;
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+      }
+
+      form {
+        width: 100%;
+        margin-left: 2px;
+
+        .form-input {
+          height: 35px;
+          width: 100%;
+          padding: 0;
+        }
+      }
+
+      .profile-container {
+        padding-left: 0;
+      }
+
+      .vertical-line {
+        margin: 0 4px;
+      }
+
+      .show {
+        top: 46px;
+      }
+    }
+  }
+}
+
+@include media-tablet-screen {
+  #content {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    nav {
+      margin-left: 0;
+      width: 100%;
+      padding: 5px;
+      margin-left: 5px;
+
+      .menu {
+        display: none;
+      }
+
+      .user-info {
+        width: auto;
+
+        .patient-info {
+          display: none;
+        }
+      }
+
+      .notification-container {
+        margin-left: 5px;
+      }
+
+      .left-container {
+        padding-left: 0;
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+      }
+
+      form {
+        width: 100%;
+        margin-left: 2px;
+
+        .form-input {
+          height: 35px;
+          width: 100%;
+          padding: 0;
+        }
+      }
+
+      .profile-container {
+        padding-left: 0;
+      }
+
+      .vertical-line {
+        margin: 0 4px;
+      }
+
+      .profile {
+        display: flex;
+        margin-right: 0;
+
+        img {
+          width: 30px;
+          height: 30px;
+        }
+      }
+
+      .show {
+        top: 47px;
+      }
+    }
+  }
+}

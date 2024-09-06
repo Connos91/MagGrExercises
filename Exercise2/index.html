@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dist/css/main.prefixed.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Hospital Dashbord</title>
+  </head>
+
+  <body>
+    <section id="sidebar">
+      <div class="top-logo-container">
+        <div class="logo-container">
+          <img src="img/logo.png" alt="Logo" class="big-logo" />
+          <img src="img/smallLogo.png" alt="Logo" class="small-logo" />
+          <a href="#" class="expand">
+            <img src="img/expand.png" alt="expand" />
+          </a>
+        </div>
+        <hr class="divider" />
+      </div>
+
+      <ul class="side-menu top">
+        <li class="active">
+          <a href="#">
+            <img src="img/overview.png" alt="overview" />
+            <p class="text">Overview</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="img/appointments.png" alt="appointments" />
+            <p class="text">Appointments</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="img/doctors.png" alt="doctors" />
+            <p class="text">Doctors</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="img/pathResults.png" alt="pathology" />
+            <p class="text">Pathology Results</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="img/charts.png" alt="chats" />
+            <div class="charts-container">
+              <p class="text">Chats</p>
+              <div class="circle">10</div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section id="content">
+      <nav>
+        <div class="menu">
+          <i class="bx bx-menu icon-large"></i>
+        </div>
+        <form action="#">
+          <div class="form-input">
+            <i class="bx bx-search icon-position"></i>
+            <input
+              id="Search"
+              type="search"
+              name="search"
+              placeholder="Search pathology results"
+            />
+          </div>
+        </form>
+        <div class="user-info">
+          <div class="left-container">
+            <div class="notification-container">
+              <div class="notification"></div>
+            </div>
+            <span class="vertical-line"></span>
+          </div>
+
+          <div class="profile-container">
+            <button class="dropdown-profile">
+              <img src="img/profil.png" alt="Photo profil" />
+            </button>
+            <div class="patient-info">
+              <h4 class="patient-name">Ola Boluwatife</h4>
+              <p class="patient">PATIENT</p>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </section>
+  </body>
+</html>

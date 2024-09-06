@@ -1,0 +1,35 @@
+@import "variables";
+@import "mixins";
+
+.patient-card {
+  margin: 23px 0 0;
+  background-color: $white;
+  box-shadow: 0 4px 8px $shadow-light-grey;
+  border-radius: 8px;
+  width: 300px;
+  padding: 20px;
+  box-sizing: border-box;
+
+  h2 {
+    margin: 0 0 10px;
+    color: $light-black;
+  }
+
+  p {
+    margin: 5px 0;
+  }
+
+  .highlight {
+    font-weight: bold;
+    color: $light-black;
+  }
+}
+
+@include media-mobile {
+  .patient-card {
+    margin: 0;
+    width: auto;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+}

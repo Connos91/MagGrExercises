@@ -1,0 +1,29 @@
+{
+  "name": "mag-gr-exercise3",
+  "version": "1.0.0",
+  "description": "Hospital Dashboard",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "copy:img": "cpx img/**/* dist/img",
+    "build:scss": "sass src/styles/main.scss src/css/main.css",
+    "build:css": "postcss src/css/main.css --use autoprefixer -o dist/css/main.prefixed.css",
+    "build": "npm run build:scss && npm run build:css && npm run copy:img"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "IE 10",
+    "Firefox ESR"
+  ],
+  "keywords": [],
+  "author": "Constantinos",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.0.0",
+    "cpx": "^1.5.0",
+    "parcel-bundler": "^1.6.1",
+    "postcss-cli": "^8.0.0",
+    "sass": "^1.32.6"
+  }
+}
