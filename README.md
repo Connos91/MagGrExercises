@@ -1,15 +1,15 @@
 Exercises 1, 2, 3
 
-#Build
+#Build:
 npm run build
 
-#Run
+#Run:
 npm start
 
 Exercise 4
 
-#Build
+#Build:
 npm run build
 
-#run
+#run:
 npm run dev
