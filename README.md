@@ -11,5 +11,5 @@ Exercise 4
 #Build:
 npm run build
 
-#run:
+#Run:
 npm run dev
